@@ -1,0 +1,66 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Branching_multiple_selection_9_Kokhan
+{
+    class Program
+    {
+        // Ввсти риську цифру
+        // Вивести її значення
+
+        static void Main(string[] args)
+        {
+            Console.Title = "Branching_Selection_9_Kokhan"
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.OutputEncoding = Encoding.Unicode;
+
+            Console.WriteLine("\t Ввeдіть риську цифру, виду 'I','V','X','L','C','D','M': ");
+            Console.WriteLine();
+
+            string rim = Console.ReadLine();
+          
+            for (; ;)
+            {
+                for (int i = 0; i < rim.Length; i++)
+                {
+                    char numb = rim[i];
+                    if (numb == 'M')
+                    {
+                        rim += " = " + 1000;
+                    }
+                    else if (numb == 'D')
+                    {
+                        rim += " = " + 500;
+                    }
+                    else if (numb == 'C')
+                    {
+                        rim += " = " + 100 ;
+                    }
+                    else if (numb == 'L')
+                    {
+                        rim += " = " + 50;
+                    }
+                    else if (numb == 'X')
+                    {
+                        rim += " = " + 10;
+                    }
+                    else if (numb == 'V')
+                    {
+                        rim += " = " + 5;
+                    }
+                    else if (numb == 'I')
+                    {
+                        rim += " = " + 1;
+                    }
+                    Console.WriteLine("\t{0}", rim);
+                    Console.ReadKey(true);
+                }
+            }
+        }
+    }
+}
