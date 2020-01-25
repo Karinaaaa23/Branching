@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+
+namespace Branching_9_Kokhan
+{
+    class Program
+    {
+        // Дано 2 змінних дійсного типу А,В
+        // Перерозподілити значення даних змінних 
+        // А виявилося менше зі значень, В - більше
+        // Вивести нові значення змінних
+
+        static void Main(string[] args)
+        {
+            Console.Title = "Branching_Selection_9_Kokhan";
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.OutputEncoding = Encoding.Unicode;
+
+           
+            Console.WriteLine("Введіть значення змінних дійсного типу А :");
+            int numbA = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введіть значення змінних дійсного типу В :");
+            int numbB = Convert.ToInt32(Console.ReadLine());
+
+            int temp;
+
+            if (numbA > numbB)
+            {
+                temp = numbB;
+                numbB = numbA;
+                numbA = temp;
+                Console.WriteLine("Змінна А набуває значення : {0}" , numbA);
+                Console.WriteLine("Змінна B набуває значення : {0}" ,numbB);
+
+            }
+            else
+            {
+                Console.WriteLine("Змінна А не змінює значення : {0}", numbA);
+                Console.WriteLine("Змінна B не змінює значення : {0}", numbB);
+            }
+           
+
+            Console.ReadKey(true);
+        }
+    }
+}
